@@ -1,0 +1,41 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.1min.ai/api/features",
+        "sendHeaders": true,
+        "specifyHeaders": "json",
+        "jsonHeaders": "{\n   \"API-KEY\":\"{your 1min.AI API key}\",\n \"Content-Type\": \"application/json\"\n}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={    \"type\": \"TEXT_TO_SPEECH\",    \"model\": \"elevenlabs-tts\",    \"promptObject\": {        \"apply_text_normalization\": \"auto\",        \"language_code\": \"fr\",        \"model_id\": \"eleven_multilingual_v2\",        \"output_format\": \"mp3_44100_128\",        \"text\": \"{{ $json.Response.replace(/&/g, \"&amp;\").replace(/>/g, \"&gt;\").replace(/</g, \"&lt;\").replace(/\"/g, \"&quot;\") }}\",        \"use_pvc_as_ivc\": false,        \"voice_id\": \"9BWtsMINqrJLrRacOk9x\",        \"voice_settings\": {            \"stability\": 0,            \"similarity_boost\": 0,            \"style\": 0,            \"use_speaker_boost\": true        }    }}",
+        "options": {
+          "response": {
+            "response": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2200,
+        160
+      ],
+      "id": "b7b418b2-9fea-4a92-a843-94a760d0a805",
+      "name": "TTS 1min.AI"
+    }
+  ],
+  "connections": {
+    "TTS 1min.AI": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7775ed8165de19d28ec967eaaeb2216a814537600b6a96973e979a4de33d0424"
+  }
+}
