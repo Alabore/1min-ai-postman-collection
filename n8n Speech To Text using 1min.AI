@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.1min.ai/api/features",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "API-KEY",
+              "value": "{your API key}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\"type\": \"SPEECH_TO_TEXT\",\n    \"model\": \"whisper-1\",\n    \"promptObject\": {\n        \"audioUrl\": \"{{ $json.asset.key }}\",\n        \"language\": \"fr\",\n        \"response_format\": \"text\"\n    }} ",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1560,
+        300
+      ],
+      "id": "40288e79-f9bd-4ab0-a72c-1c9186b3e7a3",
+      "name": "SPEECH_TO_TXT"
+    }
+  ],
+  "connections": {
+    "SPEECH_TO_TXT": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7775ed8165de19d28ec967eaaeb2216a814537600b6a96973e979a4de33d0424"
+  }
+}
