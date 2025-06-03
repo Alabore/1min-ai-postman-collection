@@ -1,7 +1,8 @@
-# 1min.ai APInin n8n
+# 1min.ai API in n8n
 I added some example for n8n:
 - to upload a file in 1min.AI to performe a STT or image description for example
 - to use Speech To Text
+- to use Text To Speech
 
   
 # 1min.ai API Postman Collection
