@@ -1,3 +1,9 @@
+# 1min.ai APInin n8n
+I added some example for n8n:
+- to upload a file in 1min.AI to performe a STT or image description for example
+- to use Speech To Text
+
+  
 # 1min.ai API Postman Collection
 
 This Postman collection provides a comprehensive set of API endpoints for interacting with the 1min.ai API services.
